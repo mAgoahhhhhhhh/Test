@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .numbers {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Random Number Generator (1-100)</h1>
+    <button onclick="generateNumbers()">Generate Numbers</button>
+
+    <div class="numbers" id="randomNumbers">
+        <!-- Random numbers will appear here -->
+    </div>
+
+    <script>
+        function generateNumbers() {
+            let numbers = [];
+            for (let i = 0; i < 4; i++) {
+                let randomNumber = Math.floor(Math.random() * 100) + 1;
+                numbers.push(randomNumber);
+            }
+            document.getElementById("randomNumbers").innerText = numbers.join(", ");
+        }
+    </script>
+
+</body>
+</html>
